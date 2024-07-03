@@ -2,10 +2,15 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 200px;
-    background: #fff;
+    /* position: relative;
+    left: 32em; */
+    align-items: center;
+    margin-top: 100px;
+    padding-left: 4em;
+    background: #e7d2d2;
     padding-bottom: 30px;
-    width: 550px;
+    max-width: 550px;
+    width: 100%
 }
 
 .header {
@@ -60,14 +65,15 @@
 
 .input input {
     height: 50px;
-    width: 380px;
+    max-width: 380px;
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
     outline: none;
     color: #797979;
     font-size: 19px;
-    margin: auto auto;
+    /* margin: auto auto; */
 
 }
 
@@ -110,22 +116,72 @@
     color: #676767
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .input {
         max-width: 300px;
     }
 }
 
 /* When the screen width is 600px or less */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .input {
         max-width: 200px;
     }
 }
 
 /* When the screen width is 400px or less */
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .input {
         max-width: 100px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .input {
+        max-width: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .input input {
+        max-width: 50px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .input input {
+        max-width: 170px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .input input {
+        max-width: 170px;
+    }
+
+    .input input::placeholder {
+        color: transparent;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        max-width: 280px;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .submit-container {
+        display: block;
+        align-items: normal;
+
+        div+div {
+            margin-top: 1.2em;
+        }
+    }
+
+    .forgot-password {
+        display: none;
     }
 }
